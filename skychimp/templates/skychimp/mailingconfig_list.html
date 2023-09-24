@@ -1,0 +1,43 @@
+{% extends 'skychimp/base.html' %}
+
+{% block content %}
+
+<div class="row">
+    {% for object in object_list %}
+    <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+
+            <div class="card-body">
+                <p class="card-text">{{ object.client }}</p>
+                <p class="card-text">{{ object.message }}</p>
+                <p class="card-text">{{ object.mailing_time }}</p>
+                <p class="card-text">{{ object.mailing_period }}</p>
+                {% if object.mailing_state == "C" %}
+                <p class="card-text">Создана</p>
+                {% elif object.mailing_state == "F" %}
+                <p class="card-text">Завершена</p>
+                {% elif object.mailing_state == "R" %}
+                <p class="card-text">Запущена</p>
+                {% endif %}
+
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <a href="#" type="button"
+                           class="btn btn-outline-primary">Смотреть</a>
+                        <a href="#" type="button"
+                           class="btn btn-outline-primary">Редактировать</a>
+                        <a href="#" type="button"
+                           class="btn btn-outline-danger">Удалить</a>
+                    </div>
+
+                </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

@@ -1,5 +1,5 @@
 from django import forms
-from skychimp.models import MailingConfig
+from skychimp.models import MailingConfig, Client, UserMail, MailingTry
 
 
 class StyleFormMixin:
@@ -13,5 +13,24 @@ class MailingConfigForm(StyleFormMixin, forms.ModelForm):
 
     class Meta:
         model = MailingConfig
+        exclude = ('owner',)
+
+
+class ClientForm(StyleFormMixin, forms.ModelForm):
+
+    class Meta:
+        model = Client
         fields = '__all__'
 
+
+class UserMailForm(StyleFormMixin, forms.ModelForm):
+
+    class Meta:
+        model = UserMail
+        fields = '__all__'
+
+
+class MailingTryConfigForm(StyleFormMixin, forms.ModelForm):
+    class Meta:
+        model = MailingTry
+        fields = '__all__'

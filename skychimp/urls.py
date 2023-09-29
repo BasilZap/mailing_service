@@ -1,9 +1,15 @@
 from skychimp.apps import SkychimpConfig
 from django.urls import path
-from skychimp.views import MailingListView
+from skychimp.views import MailingListView, MailingCreateView, ClientCreateView, UserMailCreateView, MailingDeleteView,\
+    MailingTryListView
 
 app_name = SkychimpConfig.name
 
 urlpatterns = [
-    path('', MailingListView.as_view(), name='view'),
+    path('create/', MailingCreateView.as_view(), name='create'),
+    path('delete/<int:pk>/', MailingDeleteView.as_view(), name='delete'),
+    path('mailing_try/', MailingTryListView.as_view(), name='mailing_try_list'),
+    path('create_client/', ClientCreateView.as_view(), name='create_client'),
+    path('create_user_mail/', UserMailCreateView.as_view(), name='create_user_mail'),
+    path('', MailingListView.as_view(), name='list'),
 ]

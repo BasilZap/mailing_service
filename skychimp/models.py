@@ -1,4 +1,5 @@
 from django.db import models
+from django.conf import settings
 
 NULLABLE = {'blank': True, 'null': True}
 
@@ -43,6 +44,8 @@ class MailingConfig(models.Model):
     mailing_time = models.TimeField(verbose_name='Время рассылки', **NULLABLE)
     mailing_period = models.DurationField(verbose_name='Периодичность рассылки')
     mailing_state = models.CharField(max_length=1, choices=STATE_CHOICE, default='C', verbose_name='Статус')
+    owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, **NULLABLE,
+                              verbose_name='Владелец')
 
     def __str__(self):
         return f'{self.mailing_time} - {self.mailing_period}'
@@ -72,4 +75,3 @@ class MailingTry(models.Model):
     class Meta:
         verbose_name = 'Попытка рассылки'
         verbose_name_plural = 'Попытки рассылки'
-

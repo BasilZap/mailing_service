@@ -1,0 +1,27 @@
+{% extends 'skychimp/base.html' %}
+
+{% block content %}
+
+<form method="post" enctype="multipart/form-data" class="row">
+
+
+        <div class="col-6">
+            <div class="card" >
+                <div class="card-header">
+                    <H5>
+                    Вход
+                    </H5>
+                </div>
+                <div class="card-body">
+
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit" class="btn btn-outline-success">Вход</button>
+                        <a href="{% url 'skychimp:list' %}" class="btn btn-outline-secondary">Отмена</a>
+
+
+                </div>
+            </div>
+        </div>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'skychimp/base.html' %}
+
+{% block content %}
+
+    {% for object in object_list %}
+    <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+
+            <div class="card-body">
+                <img class="card-img-top" src='/media/{{object.image}}' alt="Card image cap">
+                <p class="card-text"><a href="{% url 'blog:view' object.pk %}">{{ object.title }}</a></p>
+<!--                <p class="card-text">{{ object.title }}</p>-->
+                <p class="card-text">{{ object.body }}</p>
+                <p class="card-text">{{ object.views }}</p>
+                <p class="card-text">{{ object.publication_date }}</p>
+
+               </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

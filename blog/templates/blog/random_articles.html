@@ -1,0 +1,32 @@
+{% extends 'skychimp/base.html' %}
+{% load custom_tags %}
+{% block content %}
+<div class="container">
+    <H1><p>Добро пожаловать на сайт SkyChimp</p></H1>
+
+    <ul class="list-unstyled">
+        <div class="col-md-12">
+            <div class="card mb-4">
+                <li class="pb-1">Количество пользователей: {% total_users %}</li>
+                <li class="pb-1">Количество рассылок: {% total_mailings %}</li>
+                <li class="pb-1">Количество активных рассылок: {% active_mailings %}</li>
+                {% for article in random_articles %}
+                <li class="pb-1">{{ article.title }}</li>
+                {% endfor %}
+            </div>
+        </div>
+
+    </ul>
+    {% for object in articles %}
+    <div class="col-md-12">
+        <div class="card mb-1">
+
+            <div class="card-body">
+                <a href="{% url 'blog:view' object.pk %}">{{ object.title }}</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

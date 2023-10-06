@@ -145,5 +145,5 @@ LOGOUT_REDIRECT_URL = '/'
 EMAIL_HOST = 'smtp.yandex.ru'
 EMAIL_PORT = 465
 EMAIL_HOST_USER = 'vnzap@yandex.ru'
-EMAIL_HOST_PASSWORD = 'ybrjkfbx84uj'
+EMAIL_HOST_PASSWORD = ''
 EMAIL_USE_SSL = True

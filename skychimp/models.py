@@ -9,6 +9,8 @@ class Client(models.Model):
     client_email = models.EmailField(verbose_name='Почтовый адрес', unique=True)
     full_name = models.CharField(max_length=200, verbose_name='ФИО')
     comment = models.TextField(verbose_name='Краткий комментарий')
+    owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, **NULLABLE,
+                              verbose_name='Владелец')
 
     def __str__(self):
         return f'{self.full_name}'

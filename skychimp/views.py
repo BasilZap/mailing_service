@@ -34,6 +34,12 @@ class ClientCreateView(CreateView):
     form_class = ClientForm
     success_url = reverse_lazy('skychimp:list')
 
+    def form_valid(self, form):
+        self.object = form.save()
+        self.object.owner = self.request.user
+        self.object.save()
+        return super().form_valid(form)
+
 
 class UserMailCreateView(CreateView):
     model = UserMail

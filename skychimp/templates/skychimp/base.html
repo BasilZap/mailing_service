@@ -1,4 +1,5 @@
 {% load static %}
+<!--{% load custom_tags %}-->
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,6 +10,7 @@
     <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
 
     <title>{{ object }}</title>
+
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/album/">
 
@@ -29,12 +31,14 @@
                 <div class="col-sm-8 col-md-7 py-4">
                     <h4 class="text-white">About</h4>
                     <p class="text-muted">Курсовая работа №6 по курсу Python IND7.</p>
+
                 </div>
                 <div class="col-sm-4 offset-md-1 py-4">
                     <h4 class="text-white">Меню</h4>
                     <ul class="list-unstyled">
                         <li><a href="{% url 'skychimp:list' %}" class="text-white">Главная</a></li>
                         <li><a href="{% url 'skychimp:mailing_try_list' %}" class="text-white">Отчеты</a></li>
+<!--                        <li><a href="{% url 'blog:blog_list' %}" class="text-white">Блог</a></li>-->
                         {% if user.is_authenticated %}
                         <li><a href="{% url 'users:user_list' %}" class="text-white">Просмотр пользователей</a></li>
                         <li><a href="{% url 'users:logout' %}" class="text-white">Выход</a></li>
@@ -67,16 +71,22 @@
 
 <main role="main">
 
-    <div class="col-12 mb-5"></div>
+<div class="col-12 mb-5"></div>
 
 
-    <div class="container">
-
+<div class="container">
+{% if not user.is_verified and user.is_authenticated %}
+    <p><h1>Вы не прошли верификацию</h1></p>
+    <p>Зайдите в почтовый ящик указанный при регистрации и перейдите по указанной ссылке</p>
+    <p>Если вы не получили письмо нажмите кнопку "Отправить повторно"</p>
+    <a href="{% url 'users:get_verify' %}" type="button"
+           class="btn btn-outline-primary">Отправить повторно</a>
+{% endif %}
         {% block content %}
 
         {% endblock %}
 
-    </div>
+</div>
 
 
 </main>

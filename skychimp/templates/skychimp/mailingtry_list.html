@@ -2,8 +2,11 @@
 
 {% block content %}
 
+
+
 <div class="row">
      <div class="col-12 mb-5">
+
         <a href="{% url 'skychimp:create' %}" type="button"
            class="btn btn-outline-primary">Добавить рассылку</a>
         <a href="{% url 'skychimp:create_client' %}" type="button"
@@ -12,7 +15,10 @@
            class="btn btn-outline-primary">Добавить сообщение</a>
          <a href="{% url 'skychimp:mailing_try_list' %}" type="button"
            class="btn btn-outline-primary">Смотреть отчет</a>
+
     </div>
+
+
     {% for object in object_list %}
     <div class="col-md-4">
         <div class="card mb-4 box-shadow">

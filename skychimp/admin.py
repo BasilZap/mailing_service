@@ -4,7 +4,7 @@ from skychimp.models import MailingConfig, UserMail, MailingTry, Client
 
 @admin.register(Client)
 class ClientAdmin(admin.ModelAdmin):
-    list_display = ('client_email', 'full_name', 'comment',)
+    list_display = ('client_email', 'full_name', 'comment', 'owner')
 
 
 @admin.register(UserMail)

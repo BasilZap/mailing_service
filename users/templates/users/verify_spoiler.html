@@ -1,0 +1,14 @@
+{% extends 'skychimp/base.html' %}
+
+{% block content %}
+<div class="container">
+    <H1><p>Добро пожаловать на сайт SkyChimp</p></H1>
+    <H1><p>На вашу почту отправлено письмо для верификации</p></H1>
+    <a href="{% url 'blog:random_articles' %}" type="button"
+           class="btn btn-outline-primary">На главную</a>
+    <a href="{% url 'users:login' %}" type="button"
+           class="btn btn-outline-primary">Вход</a>
+
+</div>
+
+{% endblock %}

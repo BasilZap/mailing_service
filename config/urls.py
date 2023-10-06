@@ -18,9 +18,12 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
+from blog.views import random_articles
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('skychimp.urls')),
-    path('users/', include('users.urls', namespace='users'))
+    path('mail/', include('skychimp.urls')),
+    path('', random_articles),
+    path('users/', include('users.urls', namespace='users')),
+    path('blog/', include('blog.urls', namespace='blog'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

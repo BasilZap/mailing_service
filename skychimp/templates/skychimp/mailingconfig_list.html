@@ -3,20 +3,22 @@
 {% block content %}
 
 <div class="row">
-     <div class="col-12 mb-5">
-         {% if not perms.skychimp.stop_mailing %}
+    <div class="col-12 mb-5">
+        {% if not perms.skychimp.stop_mailing %}
         <a href="{% url 'skychimp:create' %}" type="button"
            class="btn btn-outline-primary">Добавить рассылку</a>
         <a href="{% url 'skychimp:create_client' %}" type="button"
            class="btn btn-outline-primary">Добавить клиента</a>
-         <a href="{% url 'skychimp:create_user_mail' %}" type="button"
+        <a href="{% url 'skychimp:create_user_mail' %}" type="button"
            class="btn btn-outline-primary">Добавить сообщение</a>
-         {% endif %}
-         <a href="{% url 'skychimp:mailing_try_list' %}" type="button"
+        {% endif %}
+        <a href="{% url 'skychimp:mailing_try_list' %}" type="button"
            class="btn btn-outline-primary">Смотреть отчет</a>
     </div>
-    {% for object in object_list %}
+{% for object in object_list %}
     {% if perms.skychimp.stop_mailing %}
+
+
     <div class="col-md-4">
         <div class="card mb-4 box-shadow">
 
@@ -32,48 +34,62 @@
                 <p class="card-text">Завершена</p>
                 {% elif object.mailing_state == "R" %}
                 <p class="card-text">Запущена</p>
-
-    {% elif not perms.skychimp.stop_mailing and user == object.owner %}
-    <div class="col-md-4">
-        <div class="card mb-4 box-shadow">
-
-            <div class="card-body">
-                <p class="card-text">{{ object.client }}</p>
-                <p class="card-text">{{ object.message }}</p>
-                <p class="card-text">{{ object.mailing_time }}</p>
-                <p class="card-text">{{ object.mailing_period }}</p>
-                <p class="card-text">{{ object.owner }}</p>
-                {% if object.mailing_state == "C" %}
-                <p class="card-text">Создана</p>
-                {% elif object.mailing_state == "F" %}
-                <p class="card-text">Завершена</p>
-                {% elif object.mailing_state == "R" %}
-                <p class="card-text">Запущена</p>
-
                 {% endif %}
-                {% endif %}
-
-
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                        {% if not perms.skychimp.stop_mailing %}
-                        <a href="{% url 'skychimp:delete' object.pk %}" type="button"
-                           class="btn btn-outline-danger">Удалить</a>
-                        <a href="{% url 'skychimp:update' object.pk %}" type="button"
-                           class="btn btn-outline-secondary">Изменить</a>
-                        {% else %}
-                        <a href="{% url 'skychimp:manage_mails' object.pk %}" type="button"
-                           class="btn btn-outline-secondary">Заблокировать</a>
-                        {% endif %}
-                    </div>
+                        <div class="btn-group">
+                            <a href="{% url 'skychimp:manage_mails' object.pk %}" type="button"
+                               class="btn btn-outline-secondary">Заблокировать</a>
+                        </div>
 
-                </div>
+                    </div>
 
                 </div>
             </div>
         </div>
     </div>
+
+
+    {% else %}
+
+        {% if object.owner == user %}
+    <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+
+            <div class="card-body">
+                <p class="card-text">{{ object.client }}</p>
+                <p class="card-text">{{ object.message }}</p>
+                <p class="card-text">{{ object.mailing_time }}</p>
+                <p class="card-text">{{ object.mailing_period }}</p>
+                <p class="card-text">{{ object.owner }}</p>
+                {% if object.mailing_state == "C" %}
+                <p class="card-text">Создана</p>
+                {% elif object.mailing_state == "F" %}
+                <p class="card-text">Завершена</p>
+                {% elif object.mailing_state == "R" %}
+                <p class="card-text">Запущена</p>
+                {% endif %}
+
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+
+                            <a href="{% url 'skychimp:delete' object.pk %}" type="button"
+                               class="btn btn-outline-danger">Удалить</a>
+                            <a href="{% url 'skychimp:update' object.pk %}" type="button"
+                               class="btn btn-outline-secondary">Изменить</a>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
     {% endif %}
     {% endfor %}
 </div>

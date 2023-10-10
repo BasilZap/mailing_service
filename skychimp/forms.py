@@ -12,7 +12,7 @@ class StyleFormMixin:
 class MailingConfigForm(StyleFormMixin, forms.ModelForm):
     class Meta:
         model = MailingConfig
-        exclude = ('owner',)
+        exclude = ('mailing_state', 'owner')
 
     def __init__(self, *args, **kwargs):
         """При инициализации формы добавляем фильтрацию - пользователь

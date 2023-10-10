@@ -16,7 +16,7 @@
            class="btn btn-outline-primary">Смотреть отчет</a>
     </div>
     {% for object in object_list %}
-    {% if not perms.skychimp.stop_mailing %}
+    {% if perms.skychimp.stop_mailing %}
     <div class="col-md-4">
         <div class="card mb-4 box-shadow">
 
@@ -33,7 +33,7 @@
                 {% elif object.mailing_state == "R" %}
                 <p class="card-text">Запущена</p>
 
-    {% elif user == object.owner %}
+    {% elif not perms.skychimp.stop_mailing and user == object.owner %}
     <div class="col-md-4">
         <div class="card mb-4 box-shadow">
 

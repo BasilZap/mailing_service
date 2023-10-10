@@ -1,0 +1,968 @@
+[
+  {
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+      "action_time": "2023-10-10T20:34:12.780Z",
+      "user": 13,
+      "content_type": 7,
+      "object_id": "8",
+      "object_repr": "2023-10-10 17:45:28+00:00, once per week",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+      "action_time": "2023-10-10T20:34:12.783Z",
+      "user": 13,
+      "content_type": 7,
+      "object_id": "7",
+      "object_repr": "2023-10-10 19:45:28+00:00, once per month",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+      "action_time": "2023-10-10T20:34:12.784Z",
+      "user": 13,
+      "content_type": 7,
+      "object_id": "6",
+      "object_repr": "2023-10-10 19:45:28+00:00, once per week",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+      "action_time": "2023-10-10T20:34:12.785Z",
+      "user": 13,
+      "content_type": 7,
+      "object_id": "5",
+      "object_repr": "2023-10-10 19:45:28+00:00, once per day",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+      "action_time": "2023-10-10T20:34:30.815Z",
+      "user": 13,
+      "content_type": 6,
+      "object_id": "7",
+      "object_repr": "Фейк(test@test.ru)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+      "action_time": "2023-10-10T20:34:30.817Z",
+      "user": 13,
+      "content_type": 6,
+      "object_id": "6",
+      "object_repr": "Менеджер(zapr9@yandex.ru)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+      "action_time": "2023-10-10T20:34:30.818Z",
+      "user": 13,
+      "content_type": 6,
+      "object_id": "5",
+      "object_repr": "Василий(vnzapr@gmail.com)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+      "action_time": "2023-10-10T20:34:30.819Z",
+      "user": 13,
+      "content_type": 6,
+      "object_id": "4",
+      "object_repr": "В Н З(vnzap@yandex.ru)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+      "action_time": "2023-10-10T20:35:05.999Z",
+      "user": 13,
+      "content_type": 10,
+      "object_id": "12",
+      "object_repr": "vnzap@gmail.com",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+      "action_time": "2023-10-10T20:35:06.001Z",
+      "user": 13,
+      "content_type": 10,
+      "object_id": "11",
+      "object_repr": "vnzapr@gmail.com",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+      "action_time": "2023-10-10T20:35:06.002Z",
+      "user": 13,
+      "content_type": 10,
+      "object_id": "2",
+      "object_repr": "zapr9@yandex.ru",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+      "action_time": "2023-10-10T20:35:06.003Z",
+      "user": 13,
+      "content_type": 10,
+      "object_id": "1",
+      "object_repr": "vnzapr@yandex.ru",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+      "action_time": "2023-10-10T20:42:09.213Z",
+      "user": 13,
+      "content_type": 10,
+      "object_id": "14",
+      "object_repr": "manage@manage.ru",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Groups\", \"Staff status\"]}}]"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 4,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 4,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 4,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 4,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 5,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 5,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 5,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 5,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add Клиент",
+      "content_type": 6,
+      "codename": "add_client"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change Клиент",
+      "content_type": 6,
+      "codename": "change_client"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete Клиент",
+      "content_type": 6,
+      "codename": "delete_client"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view Клиент",
+      "content_type": 6,
+      "codename": "view_client"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add Настройка рассылки",
+      "content_type": 7,
+      "codename": "add_mailingconfig"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change Настройка рассылки",
+      "content_type": 7,
+      "codename": "change_mailingconfig"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete Настройка рассылки",
+      "content_type": 7,
+      "codename": "delete_mailingconfig"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view Настройка рассылки",
+      "content_type": 7,
+      "codename": "view_mailingconfig"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add Сообщение для рассылки",
+      "content_type": 8,
+      "codename": "add_usermail"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change Сообщение для рассылки",
+      "content_type": 8,
+      "codename": "change_usermail"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete Сообщение для рассылки",
+      "content_type": 8,
+      "codename": "delete_usermail"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view Сообщение для рассылки",
+      "content_type": 8,
+      "codename": "view_usermail"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add Попытка рассылки",
+      "content_type": 9,
+      "codename": "add_mailingtry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change Попытка рассылки",
+      "content_type": 9,
+      "codename": "change_mailingtry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete Попытка рассылки",
+      "content_type": 9,
+      "codename": "delete_mailingtry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view Попытка рассылки",
+      "content_type": 9,
+      "codename": "view_mailingtry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 10,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 10,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 10,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 10,
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+      "name": "Can add Статья",
+      "content_type": 11,
+      "codename": "add_article"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+      "name": "Can change Статья",
+      "content_type": 11,
+      "codename": "change_article"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+      "name": "Can delete Статья",
+      "content_type": 11,
+      "codename": "delete_article"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+      "name": "Can view Статья",
+      "content_type": 11,
+      "codename": "view_article"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+      "name": "Can add django job",
+      "content_type": 12,
+      "codename": "add_djangojob"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+      "name": "Can change django job",
+      "content_type": 12,
+      "codename": "change_djangojob"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+      "name": "Can delete django job",
+      "content_type": 12,
+      "codename": "delete_djangojob"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+      "name": "Can view django job",
+      "content_type": 12,
+      "codename": "view_djangojob"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+      "name": "Can add django job execution",
+      "content_type": 13,
+      "codename": "add_djangojobexecution"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+      "name": "Can change django job execution",
+      "content_type": 13,
+      "codename": "change_djangojobexecution"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+      "name": "Can delete django job execution",
+      "content_type": 13,
+      "codename": "delete_djangojobexecution"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+      "name": "Can view django job execution",
+      "content_type": 13,
+      "codename": "view_djangojobexecution"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+      "name": "can stop mailing",
+      "content_type": 7,
+      "codename": "stop_mailing"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+      "name": "can blocking users",
+      "content_type": 10,
+      "codename": "block_users"
+    }
+  },
+  {
+    "model": "auth.group",
+    "pk": 1,
+    "fields": {
+      "name": "manager",
+      "permissions": [
+        24,
+        53,
+        28,
+        36,
+        32,
+        54
+      ]
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "8491ictsuv2uy2mhsepi8fvn441cxxna",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2hCBAlOX7nsGMsOAVA0kpV0Z765NutDtf-_9lwi4rSVsPS1hZnERyorT70gYH6nuhO9Yb03GVtdlJrkr8qBdTo3T83q4fwcFe_nWpJ13zugcFQA7c7bW0IhMQKCJvAe2DkGNkH0a_GAxZZPZQTY2DhHE-wP3qDf_:1qqJq8:BldUetdcL3tWlQKkEdnbiXbOPORgUz-LK1EfF5h8Vf8",
+      "expire_date": "2023-10-24T21:00:28.676Z"
+    }
+  },
+  {
+    "model": "skychimp.client",
+    "pk": 8,
+    "fields": {
+      "client_email": "test2@test.ru",
+      "full_name": "Второй тестовый пользователь",
+      "comment": "Существует для наполнения",
+      "owner": 15
+    }
+  },
+  {
+    "model": "skychimp.client",
+    "pk": 9,
+    "fields": {
+      "client_email": "test1@test.ru",
+      "full_name": "Первый тестовый пользователь",
+      "comment": "Тоже ждет сообщения в консоль",
+      "owner": 16
+    }
+  },
+  {
+    "model": "skychimp.usermail",
+    "pk": 4,
+    "fields": {
+      "title": "Привет",
+      "body": "Наверное ты по нам очень соскучился"
+    }
+  },
+  {
+    "model": "skychimp.usermail",
+    "pk": 5,
+    "fields": {
+      "title": "Здравствуйте",
+      "body": "Решили напомнить Вам о себе"
+    }
+  },
+  {
+    "model": "skychimp.usermail",
+    "pk": 6,
+    "fields": {
+      "title": "Просто сообщение",
+      "body": "Оставим его лежать у Вас на почте"
+    }
+  },
+  {
+    "model": "skychimp.usermail",
+    "pk": 7,
+    "fields": {
+      "title": "Тест теста",
+      "body": "Протестировать тест"
+    }
+  },
+  {
+    "model": "skychimp.mailingconfig",
+    "pk": 9,
+    "fields": {
+      "message": 4,
+      "mailing_start_time": "2023-10-10T21:45:28Z",
+      "mailing_period": "day",
+      "mailing_stop_time": "2023-10-20T19:45:28Z",
+      "mailing_state": "R",
+      "owner": 15,
+      "clients": [
+        8
+      ]
+    }
+  },
+  {
+    "model": "skychimp.mailingconfig",
+    "pk": 10,
+    "fields": {
+      "message": 6,
+      "mailing_start_time": "2023-10-10T19:45:28Z",
+      "mailing_period": "week",
+      "mailing_stop_time": "2023-11-20T19:45:28Z",
+      "mailing_state": "C",
+      "owner": 16,
+      "clients": [
+        9
+      ]
+    }
+  },
+  {
+    "model": "skychimp.mailingtry",
+    "pk": 30,
+    "fields": {
+      "mailing": 9,
+      "try_time": "2023-10-10T21:01:00.012Z",
+      "try_state": true,
+      "server_response": "Успешно"
+    }
+  },
+  {
+    "model": "skychimp.mailingtry",
+    "pk": 31,
+    "fields": {
+      "mailing": 9,
+      "try_time": "2023-10-10T21:01:00.012Z",
+      "try_state": false,
+      "server_response": "Ошибка отправки"
+    }
+  },
+  {
+    "model": "skychimp.mailingtry",
+    "pk": 32,
+    "fields": {
+      "mailing": 9,
+      "try_time": "2023-10-10T21:01:00.015Z",
+      "try_state": true,
+      "server_response": "Успешно"
+    }
+  },
+  {
+    "model": "skychimp.mailingtry",
+    "pk": 33,
+    "fields": {
+      "mailing": 9,
+      "try_time": "2023-10-10T21:01:00.015Z",
+      "try_state": false,
+      "server_response": "Ошибка отправки"
+    }
+  },
+  {
+    "model": "skychimp.mailingtry",
+    "pk": 34,
+    "fields": {
+      "mailing": 9,
+      "try_time": "2023-10-10T21:01:30.029Z",
+      "try_state": true,
+      "server_response": "Успешно"
+    }
+  },
+  {
+    "model": "skychimp.mailingtry",
+    "pk": 35,
+    "fields": {
+      "mailing": 9,
+      "try_time": "2023-10-10T21:01:30.029Z",
+      "try_state": false,
+      "server_response": "Ошибка отправки"
+    }
+  },
+  {
+    "model": "skychimp.mailingtry",
+    "pk": 36,
+    "fields": {
+      "mailing": 9,
+      "try_time": "2023-10-10T21:02:10.034Z",
+      "try_state": true,
+      "server_response": "Успешно"
+    }
+  },
+  {
+    "model": "skychimp.mailingtry",
+    "pk": 37,
+    "fields": {
+      "mailing": 9,
+      "try_time": "2023-10-10T21:02:10.034Z",
+      "try_state": false,
+      "server_response": "Ошибка отправки"
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 13,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$JkllWFGaVnh86RvXLGrQWL$kR5xhBtKsWzCdIKLHHN3PLRa195u4pLQN6lvSd0yiKI=",
+      "last_login": "2023-10-10T20:41:05.106Z",
+      "is_superuser": true,
+      "first_name": "admin",
+      "last_name": "Superuser",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-10-10T20:32:49.367Z",
+      "email": "admin@adminov.ru",
+      "avatar": "",
+      "verify_code": null,
+      "is_verified": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 14,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$b1pPFY1H91qrwUtTlzwcwD$KxLablWRztT4zyvRo30/1Fqs2oDJhKGKbjsVWsx5rsc=",
+      "last_login": "2023-10-10T20:49:53.451Z",
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-10-10T20:37:12Z",
+      "email": "manage@manage.ru",
+      "avatar": "",
+      "verify_code": "236694",
+      "is_verified": true,
+      "groups": [
+        1
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 15,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$fdirBTmENm7oeQciuKGv8i$ZoTScxVo8/4KmZFYo45+vxa/T2QSLyXLX9L/S2BAkHs=",
+      "last_login": "2023-10-10T21:00:28.674Z",
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-10-10T20:38:50.444Z",
+      "email": "test1@test.ru",
+      "avatar": "",
+      "verify_code": "215128",
+      "is_verified": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 16,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$c4JQNU6GxxAL0evsq1j5lK$j0+VWXFR7iDs2cj7vCyQqZTjkZ/sWfrvyciZMTLOA/I=",
+      "last_login": "2023-10-10T20:47:08.320Z",
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-10-10T20:40:18.968Z",
+      "email": "test2@test.ru",
+      "avatar": "",
+      "verify_code": "741076",
+      "is_verified": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "blog.article",
+    "pk": 1,
+    "fields": {
+      "title": "Что такое спам-рассылки и зачем их отправляют",
+      "body": "Спам-рассылки — это массовая отправка сообщений пользователям, которые не давали согласия на их получение. Они не оставляли свой адрес в форме, не подтверждали подписку, скорее всего не заинтересованы в продукте или даже не слышали о компании. Такие электронные письма приходят внезапно и вызывают недоумение, а часто — раздражение. Пользователи могут пожаловаться на них, стремятся отключить рассылки, чтобы больше не видеть их в почте.",
+      "image": "blog/43856371b7c450f4081f6339fd80d921b5ec4251.png",
+      "views": 0,
+      "publication_date": "2023-10-10"
+    }
+  },
+  {
+    "model": "blog.article",
+    "pk": 2,
+    "fields": {
+      "title": "Чем так плохи спам-рассылки и как их заблокировать",
+      "body": "Хотя некоторые проекты используют этот «черный» метод, чтобы заработать, на самом деле они вредят всем участникам: отправителям, получателям, почтовым сервисам и платформам email-маркетинга.\r\n\r\nОтправителям спам-рассылка, конечно, может принести какой-то профит в виде небольшого трафика и продаж. Но спам чаще всего рассылают по купленной базе, в которой процент целевой аудитории непредсказуем. Кроме того, люди не подписывались на рассылку, они не ждут рекламных писем и не готовы к продаже. Если говорить совсем просто ― это может их даже разозлить, и они могут пожаловаться на нежелательные сообщения. Письма, рассылаемые без согласия получателей блокируют почтовые сервисы и платформы email-маркетинга. В итоге  доставляемость, открываемость, конверсия и другие показатели email-рассылки стремятся к нулю.\r\n\r\nЧтобы точно знать, что рассылка не расценивается как спамная, контролируйте также Spam complaint rate и Bounce Rate. Последний показывает процент писем, отклоненных почтовыми сервисами. Причины отказов не всегда связаны со спамом, но хорошо, если эта метрика не превышает 2–3 %. Жалобы на спам в статистике Sendsay удобно анализировать в отчете по отпискам.",
+      "image": "blog/5bd243b29cd29fc4afaa350fd7d83875d756ed31.png",
+      "views": 1,
+      "publication_date": "2023-10-10"
+    }
+  },
+  {
+    "model": "blog.article",
+    "pk": 3,
+    "fields": {
+      "title": "Чем спам отличается от честной email-рассылки",
+      "body": "Честный email-маркетинг отличается от спама:\r\n\r\nцелью\r\nспособом сбора базы\r\nсогласием получателей\r\nсегментацией\r\nпоказателями статистики\r\nсодержимым писем\r\nрегулярностью\r\nлегальностью",
+      "image": "blog/cc18be6daf049746fdb2a1e48ff075ef3ee33477.png",
+      "views": 2,
+      "publication_date": "2023-10-10"
+    }
+  },
+  {
+    "model": "blog.article",
+    "pk": 4,
+    "fields": {
+      "title": "Как не стать спамером",
+      "body": "Подытожим все, о чем мы говорили, чек-листом по созданию и ведению честных email-рассылок. Эти меры снизят риск попадания в спам, а заодно повысят эффективность email-маркетинга.\r\n\r\nПолучайте согласие на рассылку. Обязательно добавляйте в форму подписки чекбоксы и не активируйте их по умолчанию. Также можно подключить двухэтапную подписку с подтверждением. Читайте, как это сделать, в статье «Как правильно получать согласие подписчиков на вашу email-рассылку». \r\nДобавляйте ссылку для отписки. Не бойтесь из-за нее растерять базу. Те, кому вы неинтересны, отпишутся в любом случае. Ссылка для отписки — это забота о пользователях. К тому же, она снижает количество жалоб на спам.\r\nИзбегайте спам-слов — фраз и словосочетаний, из-за которых фильтры почтовых сервисов могут отправить рассылку в папку «Спам»: деньги, долги, бесплатный, не спам, без вложений и другие. Не все письма с этими словами фильтруются, но злоупотреблять ими не стоит.\r\nНе отправляйте письма с одними картинками. Письма, в которых совсем не текста, тоже расцениваются почтовыми клиентами как спам. Поэтому для реализации сложного дизайна используйте html или конструкторы email-рассылок и верстайте текстовый контент соответствующими блоками, а не картинками.\r\nРаботайте с базой. Даже честно собранную базу нужно актуализировать: избавляться от отписавшихся адресов и реактивировать тех, кто давно не читает письма. С первой задачей хороший сервис email-рассылок справляется автоматически. А про реактивацию подписчиков мы подробно рассказали в отдельной инструкции. Все это поможет снизить количество жалоб на спам и риски блокировок.\r\nСегментировать и персонализировать. Это поможет отправлять каждому подписчику максимально релевантные письма, а значит им незачем будет жаловаться на спам. К тому же, это повышает и другие показатели: открываемость, кликабельность, конверсию в продажи.",
+      "image": "blog/3c9d161655c3974a6283117774004b08a234c0b9.png",
+      "views": 1,
+      "publication_date": "2023-10-10"
+    }
+  }
+]

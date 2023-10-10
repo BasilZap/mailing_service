@@ -21,3 +21,16 @@ class UserForm(StyleFormMixin, UserChangeForm):
         super().__init__(*args, **kwargs)
 
         self.fields['password'].widget = forms.HiddenInput()
+
+
+class ManageUserForm(StyleFormMixin, forms.ModelForm):
+    disabled_fields = ('first_name', 'last_name', 'email', 'avatar')
+
+    class Meta:
+        model = User
+        fields = ('first_name', 'last_name', 'email', 'avatar', 'is_active')
+
+    def __init__(self, *args, **kwargs):
+        super(ManageUserForm, self).__init__(*args, **kwargs)
+        for field in self.disabled_fields:
+            self.fields[field].disabled = True

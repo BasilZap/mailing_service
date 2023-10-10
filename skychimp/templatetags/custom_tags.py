@@ -2,7 +2,6 @@ from django import template
 from skychimp.models import MailingConfig, Client
 
 
-
 register = template.Library()
 
 

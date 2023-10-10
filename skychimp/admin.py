@@ -14,9 +14,12 @@ class UserMailAdmin(admin.ModelAdmin):
 
 @admin.register(MailingConfig)
 class MailingConfigAdmin(admin.ModelAdmin):
-    list_display = ('client', 'message', 'mailing_time', 'mailing_period', 'mailing_state')
+    list_display = ('message', 'mailing_start_time', 'mailing_period', 'mailing_stop_time', 'mailing_state')
+
+# 'client',
 
 
 @admin.register(MailingTry)
 class MailingTryAdmin(admin.ModelAdmin):
     list_display = ('mailing', 'try_time', 'try_state', 'server_response')
+

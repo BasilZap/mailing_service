@@ -1,6 +1,8 @@
 from django.db import models
 from django.conf import settings
 
+from skychimp.constants import CHOICE_PERIOD, STATE_CHOICE
+
 NULLABLE = {'blank': True, 'null': True}
 
 
@@ -13,7 +15,7 @@ class Client(models.Model):
                               verbose_name='Владелец')
 
     def __str__(self):
-        return f'{self.full_name}'
+        return f'{self.full_name}({self.client_email})'
 
     class Meta:
         verbose_name = 'Клиент'
@@ -35,26 +37,24 @@ class UserMail(models.Model):
 
 # Модель "Настройка рассылки"
 class MailingConfig(models.Model):
-    STATE_CHOICE = [
-        ('F', 'завершена'),
-        ('R', 'запущена'),
-        ('C', 'создана'),
-    ]
 
-    client = models.ForeignKey(Client, on_delete=models.DO_NOTHING, verbose_name='Клиент')
+    clients = models.ManyToManyField(Client, verbose_name='Клиент')
     message = models.ForeignKey(UserMail, on_delete=models.DO_NOTHING, verbose_name='Сообщение')
-    mailing_time = models.TimeField(verbose_name='Время рассылки', **NULLABLE)
-    mailing_period = models.DurationField(verbose_name='Периодичность рассылки')
+    mailing_start_time = models.DateTimeField(verbose_name='Время начала рассылки', **NULLABLE)
+    mailing_period = models.CharField(max_length=6, choices=CHOICE_PERIOD, default='day', verbose_name='Периодичность '
+                                                                                                       'рассылки')
+    mailing_stop_time = models.DateTimeField(verbose_name='Время окончания рассылки', **NULLABLE)
     mailing_state = models.CharField(max_length=1, choices=STATE_CHOICE, default='C', verbose_name='Статус')
     owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, **NULLABLE,
                               verbose_name='Владелец')
 
     def __str__(self):
-        return f'{self.mailing_time} - {self.mailing_period}'
+        return f'{self.mailing_start_time}, once per {self.mailing_period}'
 
     class Meta:
         verbose_name = 'Настройка рассылки'
         verbose_name_plural = 'Настройки рассылки'
+        permissions = (("stop_mailing", "can stop mailing"),)
 
 
 # Модель "Статус рассылки"
@@ -65,14 +65,7 @@ class MailingTry(models.Model):
     server_response = models.CharField(max_length=200, verbose_name='Ответ сервера', **NULLABLE)
 
     def __str__(self):
-        if self.try_state is not None:
-            if self.try_state:
-                state_str = 'Успешно'
-            else:
-                state_str = 'Ошибка'
-        else:
-            state_str = 'Не определено'
-        return f'{self.try_time} - статус: {state_str}'
+        return f'{self.try_time} - {self.try_state}'
 
     class Meta:
         verbose_name = 'Попытка рассылки'

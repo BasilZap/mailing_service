@@ -36,12 +36,16 @@
                 <div class="col-sm-4 offset-md-1 py-4">
                     <h4 class="text-white">Меню</h4>
                     <ul class="list-unstyled">
-                        <li><a href="{% url 'skychimp:list' %}" class="text-white">Главная</a></li>
-                        <li><a href="{% url 'skychimp:mailing_try_list' %}" class="text-white">Отчеты</a></li>
-<!--                        <li><a href="{% url 'blog:blog_list' %}" class="text-white">Блог</a></li>-->
+                        <li><a href="{% url 'blog:random_articles' %}" class="text-white">Главная</a></li>
+                        <li><a href="{% url 'blog:blog_list' %}" class="text-white">Блог</a></li>
                         {% if user.is_authenticated %}
+                        <li><a href="{% url 'skychimp:list' %}" class="text-white">Рассылки</a></li>
+                        <li><a href="{% url 'skychimp:mailing_try_list' %}" class="text-white">Отчеты</a></li>
+                        {% if perms.users.block_users %}
                         <li><a href="{% url 'users:user_list' %}" class="text-white">Просмотр пользователей</a></li>
+                        {% endif %}
                         <li><a href="{% url 'users:logout' %}" class="text-white">Выход</a></li>
+                        <li><a href="{% url 'users:profile' %}" class="text-white">Профиль</a></li>
                         {% else %}
                         <li><a href="{% url 'users:login' %}" class="text-white">Вход</a></li>
                         <li><a href="{% url 'users:register' %}" class="text-white">Регистрация</a></li>
@@ -71,22 +75,18 @@
 
 <main role="main">
 
-<div class="col-12 mb-5"></div>
+    <div class="col-12 mb-5"></div>
 
 
-<div class="container">
-{% if not user.is_verified and user.is_authenticated %}
-    <p><h1>Вы не прошли верификацию</h1></p>
-    <p>Зайдите в почтовый ящик указанный при регистрации и перейдите по указанной ссылке</p>
-    <p>Если вы не получили письмо нажмите кнопку "Отправить повторно"</p>
-    <a href="{% url 'users:get_verify' %}" type="button"
-           class="btn btn-outline-primary">Отправить повторно</a>
-{% endif %}
+    <div class="container">
+
+
+        <p></p>
         {% block content %}
 
         {% endblock %}
 
-</div>
+    </div>
 
 
 </main>

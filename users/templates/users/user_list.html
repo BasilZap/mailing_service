@@ -4,6 +4,7 @@
 
 <div class="row">
     {% for object in object_list %}
+        {% if not object.is_superuser %}
     <div class="col-md-4">
         <div class="card mb-4 box-shadow">
 
@@ -28,6 +29,7 @@
                 </div>
         </div>
     </div>
+    {% endif %}
     {% endfor %}
 </div>
 

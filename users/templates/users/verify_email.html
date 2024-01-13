@@ -1,0 +1,22 @@
+{% extends 'skychimp/base.html' %}
+
+{% block content %}
+
+<form class="row">
+    <div><H1>Верификация</H1></div>
+    <div>
+        {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li class="{{ message.tags }}">
+                {{ message|safe }}
+                <a href="{% url 'users:profile' %}" class="close">x</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}
+    </div>
+
+
+</form>
+{% endblock %}
